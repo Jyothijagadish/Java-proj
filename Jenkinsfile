@@ -86,7 +86,7 @@ Build URL  : ${BUILD_URL}
 Regards,
 Jenkins
 """,
-                to: "akashjyothi369@gmail.com"
+                to: "jyothij1056@gmail.com"
             )
         }
 
@@ -108,7 +108,7 @@ Please check logs for details.
 Regards,
 Jenkins
 """,
-                to: "akashjyothi369@gmail.com"
+                to: "jyothij1056@gmail.com"
             )
         }
     }
