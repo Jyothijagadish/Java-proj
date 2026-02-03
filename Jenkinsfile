@@ -30,8 +30,8 @@ pipeline{
                 sh '''
                 mvn sonar:sonar \
                 -Dsonar.projectKey=java-proj \
-                -Dsonar.host.url=http://107.23.182.47:9000 \
-                -Dsonar.login=516ee64be0b8e09052afa0222c3b6121c5c38fdb
+                -Dsonar.host.url=http://54.87.6.255:9000 \
+                -Dsonar.login=feeb87ca2e7cc637f0fc3cf29f333dd1c4b6e16d
                 '''
             }
         }
