@@ -29,16 +29,16 @@ pipeline{
             steps{
                 sh '''
                 mvn sonar:sonar \
-                -Dsonar.projectKey=java-proj \
-                -Dsonar.host.url=http://54.87.6.255:9000 \
-                -Dsonar.login=feeb87ca2e7cc637f0fc3cf29f333dd1c4b6e16d
+                -Dsonar.projectKey=twitter-app \
+                -Dsonar.host.url=http://54.174.198.199:9000 \
+                -Dsonar.login=16c2bffbefd4dd7d312727682fd9409d1f15ac13
                 '''
             }
         }
 
         stage('Docker image Build'){
             steps{
-                sh 'docker build -t akashjyothi/twitter-app:${GIT_COMMIT} .'
+                sh 'docker build -t akashjyothi/twitter-app-clone:${GIT_COMMIT} .'
             }
         }
 
@@ -50,7 +50,7 @@ pipeline{
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
                     sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
-                    sh 'docker push akashjyothi/twitter-app:${GIT_COMMIT}'
+                    sh 'docker push akashjyothi/twitter-app-clone:${GIT_COMMIT}'
                 }
             }
         }
@@ -86,7 +86,7 @@ Build URL  : ${BUILD_URL}
 Regards,
 Jenkins
 """,
-                to: "jyothij1056@gmail.com"
+                to: "akashjyothi369@gmail.com"
             )
         }
 
@@ -108,7 +108,7 @@ Please check logs for details.
 Regards,
 Jenkins
 """,
-                to: "jyothij1056@gmail.com"
+                to: "akashjyothi369@gmail.com"
             )
         }
     }
